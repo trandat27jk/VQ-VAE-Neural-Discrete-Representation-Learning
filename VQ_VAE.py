@@ -42,3 +42,4 @@ def vq_vae_loss(output, target, ze, e, beta):
     l2_loss_1 = F.mse_loss(ze.detach(), e)
     l2_loss_2 = beta * F.mse_loss(ze, e.detach())
     return recon_loss + l2_loss_1 + l2_loss_2
+    
